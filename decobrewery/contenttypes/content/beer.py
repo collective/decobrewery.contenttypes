@@ -7,6 +7,8 @@ from zope import schema
 from plone.directives import form, dexterity
 
 from plone.app.layoutbehavior import ILayout
+from plone.namedfile.field import NamedImage
+
 
 class IBeer(form.Schema):
     """Beer schema"""
@@ -21,6 +23,10 @@ class IBeer(form.Schema):
         )
     ingredients = schema.TextLine(
             title=u"Ingredients",
+            required=False,
+        )
+    picture = NamedImage(
+            title=u"Picture",
             required=False,
         )
 

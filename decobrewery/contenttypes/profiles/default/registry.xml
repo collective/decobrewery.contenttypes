@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<registry>
+  <record interface="plone.app.standardtiles.interfaces.IStandardTilesSettings" field="listing_views">
+    <value purge="False">
+      <element key="beer_listing_view">Beer listing view</element>
+    </value>
+  </record>
+</registry>

@@ -7,4 +7,11 @@
         directory="images"
         />
 
+    <browser:page
+        name="beer_listing_view"
+        for="*"
+        permission="zope2.View"
+        template="beer_listing_view.pt"
+        />
+
 </configure>
