@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      i18n:domain="plone">
+
+    <body>
+      <div tal:define="results context" tal:repeat="item results">
+        <tal:block tal:define="item_url item/getURL;
+                               item_title_or_id item/title_or_id;
+                               item_description item/Description;">
+
+          <div class="bottle yellow">
+            <div class="bottle-content bottle-bg">
+            </div>
+            <div class="bottle-content">
+              <h2 tal:content="item_title_or_id">Deco Weizener</h2>
+              <p tal:content="item_description">Rich taste come from bananas, monkeys eat applepie.</p>
+              <a class="more" href="yellow" tal:attributes="href item_url">More &rarr;</a>
+            </div>
+          </div>
+
+        </tal:block>
+      </div>
+    </body>
+</html>

@@ -14,4 +14,11 @@
         template="beer_listing_view.pt"
         />
 
+    <browser:page
+        name="beer_homepage_view"
+        for="*"
+        permission="zope2.View"
+        template="beer_homepage_view.pt"
+        />
+
 </configure>
