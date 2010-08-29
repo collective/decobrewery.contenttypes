@@ -6,7 +6,7 @@
       i18n:domain="plone">
 
     <body>
-        <div tal:define="results context" tal:repeat="item results">
+        <div class="beerListing" tal:define="results context" tal:repeat="item results">
             <tal:block tal:define="item_url item/getURL;
                                    item_title_or_id item/title_or_id;
                                    item_description item/Description;">

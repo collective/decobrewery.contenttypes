@@ -32,5 +32,6 @@
 
         </tal:block>
       </div>
+      <div class="visualClear"></div>
     </body>
 </html>
