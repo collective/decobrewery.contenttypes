@@ -8,11 +8,11 @@ from plone.directives import form, dexterity
 
 from plone.app.layoutbehavior import ILayout
 from plone.namedfile.field import NamedImage
-
+from plone.namedfile.interfaces import IImageScaleTraversable
 
 class IBeer(form.Schema):
     """Beer schema"""
-
+    
     price = schema.Float(
             title=u"Price",
             required=False,
@@ -32,7 +32,7 @@ class IBeer(form.Schema):
 
 
 class Beer(dexterity.Container):
-    grok.implements(IBeer)
+    grok.implements(IBeer, IImageScaleTraversable)
 
 
 class View(grok.View):

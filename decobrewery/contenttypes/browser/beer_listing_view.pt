@@ -14,12 +14,19 @@
                 <div class="tileItem"
                      tal:define="item_object item/getObject;">
 
-                    <a href="#"
-                       tal:condition="exists:item_object/image_thumb"
-                       tal:attributes="href item_url">
-                        <img src="" alt=""
-                             tal:replace="structure python: path('nocall:item_object/tag')(scale='thumb', css_class='tileImage')" />
-                    </a>
+
+                   <a href="#" tal:define="scales item_object/@@images;
+                                           thumbnail python: scales.scale('image', width=64, height=64);"
+                               tal:attributes="href item_url;"
+                               tal:condition="thumbnail">
+
+                          <img src="" height="" width="" 
+                               tal:attributes="src thumbnail/url;
+                                               height thumbnail/height | nothing;
+                                               width thumbnail/width | nothing;"
+                          />
+                   </a>
+
 
                     <h2 class="tileHeadline"
                         metal:define-macro="listitem">

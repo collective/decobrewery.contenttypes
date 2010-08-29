@@ -11,10 +11,19 @@
                                item_title_or_id item/title_or_id;
                                item_description item/Description;">
 
-          <div class="bottle yellow">
-            <div class="bottle-content bottle-bg">
+          <div class="bottle" >
+            <div class="bottle-content" 
+                  tal:define="item_object item/getObject;
+                              picture nocall:item_object/image"
+                  tal:condition="nocall:picture">
+
+                  <img tal:attributes="src string:${item_object/absolute_url}/@@download/image/${picture/filename};
+                                       height picture/_height | nothing;
+                                       width picture/_width | nothing;
+                                       class string:bottle-home-bg;"
+                  />
             </div>
-            <div class="bottle-content">
+            <div class="bottle-content bottle-bg">
               <h2 tal:content="item_title_or_id">Deco Weizener</h2>
               <p tal:content="item_description">Rich taste come from bananas, monkeys eat applepie.</p>
               <a class="more" href="yellow" tal:attributes="href item_url">More &rarr;</a>
