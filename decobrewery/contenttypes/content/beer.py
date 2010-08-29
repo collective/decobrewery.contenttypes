@@ -25,7 +25,7 @@ class IBeer(form.Schema):
             title=u"Ingredients",
             required=False,
         )
-    picture = NamedImage(
+    image = NamedImage(
             title=u"Picture",
             required=False,
         )
