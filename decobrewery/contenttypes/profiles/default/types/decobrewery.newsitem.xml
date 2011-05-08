@@ -22,9 +22,9 @@
 
   <!-- List of enabled behaviors -->
   <property name="behaviors">
-    <element value="plone.app.dexterity.behaviors.metadata.IDublinCore" />
     <element value="plone.app.content.interfaces.INameFromTitle" />
-    <element value="plone.app.layoutbehavior.ILayout" />
+    <element value="plone.app.dexterity.behaviors.metadata.IDublinCore" />
+    <element value="plone.app.blocks.layoutbehavior.ILayoutAware" />
   </property>
 
   <!-- View information -->
