@@ -6,7 +6,7 @@ from zope import schema
 
 from plone.directives import form, dexterity
 
-from plone.app.layoutbehavior import ILayout
+from plone.app.blocks.layoutbehavior import ILayoutAware
 
 class INewsItem(form.Schema):
     """NewsItem schema"""
@@ -31,4 +31,4 @@ class View(grok.View):
         the plone.app.layoutbehavior behavior. 
         This result is supposed to be transformed by plone.app.blocks.
         """
-        return ILayout(self.context).content
+        return ILayoutAware(self.context).content
